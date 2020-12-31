@@ -1,0 +1,33 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <h1 class="display-4 animate__animated ♥">Hello, {{user.username}} ♥ </h1>
+  <p class="lead">This is simple URL-Shortner</p>
+  <hr class="my-4">
+  <p>Please Click on Dashboard</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="{% url 'dashboard' %}" role="button">Dashboard</a>
+  </p>
+</div>
+
+
+{% if error %}
+
+<div class="container shadow p-4">
+    <div class="row">
+        <div class="col-12 text-center">
+            <p>The Url you are looking for doesn't exist</p>
+            <a href="{% url 'dashboard' %}" class="btn btn-primary">Shorten A Url</a>
+        </div>
+    </div>
+</div>
+
+{% endif %}
+
+</body>
+
+</html>
+
+{% endblock %}
