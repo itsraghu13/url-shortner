@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app_authentication',
     'url_main',
     'weather_app',
+    'covid_app',
 ]
    
 

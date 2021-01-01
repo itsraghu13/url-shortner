@@ -33,5 +33,6 @@ urlpatterns = [
     path('<str:query>/', home, name="home"),
     # path('/weather/',weather,name="weather"),
     path('weather_app/', include('weather_app.urls')),
+    path('covid/', include('covid_app.urls')),
 ]
 
