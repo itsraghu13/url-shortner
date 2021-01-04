@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'url_main',
     'weather_app',
     'covid_app',
+    'rail_app',
 ]
    
 

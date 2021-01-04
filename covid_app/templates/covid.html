@@ -39,8 +39,8 @@
   </div>
 
   <div class="container pt-3">
-    <h2>Country Wise Summary:</h2>
-    <small>
+    <h2 class="text-center">Country Wise Summary:</h2>
+    {% comment %} <small>
       Type something in the input field to search the table with Country Name:
     </small>
     <input
@@ -50,9 +50,12 @@
       placeholder="Search...."
     />
     <br />
-  </div>
+  </div> {% endcomment %}
+
+<!------Table------>
+
   <div class="container">
-    <table class="table">
+    <table class="table" id="myTable">
       <thead class="thead-dark">
         <tr>
           <th>Sno.</th>
@@ -62,7 +65,7 @@
           <th>Total Recovered</th>
         </tr>
       </thead>
-      <tbody id="myTable">
+      <tbody id="myTable"> <!---->
         {% for country in countries_data %}
         <tr>
           <td>{{forloop.counter}}</td>
@@ -77,8 +80,8 @@
   </div>
 </div>
 
-<script>
-  $(document).ready(function () {
+{% comment %} <script>
+$(document).ready(function () {
     $("#myInput").on("keyup", function () {
       var value = $(this).val().toLowerCase();
       $("#myTable tr").filter(function () {
@@ -86,6 +89,15 @@
       });
     });
   });
-</script>
+</script> {% endcomment %}
+
+
+{% comment %} <script>
+  $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script> {% endcomment %}
+
+
 
 {% endblock content %}

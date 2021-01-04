@@ -1,0 +1,9 @@
+{% extends 'nav.html' %}
+
+{% block content %}
+
+<form method="post" action=""  name="pnrForm">
+            <input ng-model="pnrno" name="pnrnumber" value="" placeholder="Enter PNR number" type="tel" ng-minlength="10" ng-maxlength="10" pattern="/^\d{10}$/" size="10" maxlength="10">
+            <input name="PNR STATUS" value="CHECK STATUS" type="button" ng-click="search(0);">
+        </form>
+{% endblock content %}

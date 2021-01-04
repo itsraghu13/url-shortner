@@ -1,11 +1,11 @@
-from django.conf.urls import url
+
 from django.contrib.auth.decorators import login_required
 from django.http import response
 from django.shortcuts import render
 import requests
 
 # Create your views here.
-
+@login_required(login_url='/login/')
 def covid(request):
     url = 'https://api.covid19api.com/summary'
     response = requests.get(url,verify=False)

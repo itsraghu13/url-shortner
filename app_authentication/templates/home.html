@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<div class="jumbotron">
+<div class="jumbotron container-fluid text-center">
   <h1 class="display-4 animate__animated ♥">Hello, {{user.username}} ♥ </h1>
   <p class="lead">This is simple URL-Shortner, Covid-Tracker</p>
-  <hr class="my-4">
+  <hr class="my-4 ">
   <p>Please Click on Dashboard</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="{% url 'dashboard' %}" role="button">Dashboard</a>
+    <a class="btn btn-primary btn-lg" href="{% url 'dashboard' %}" role="button" >Dashboard</a>
   </p>
 </div>
 

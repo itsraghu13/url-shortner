@@ -34,5 +34,6 @@ urlpatterns = [
     # path('/weather/',weather,name="weather"),
     path('weather_app/', include('weather_app.urls')),
     path('covid/', include('covid_app.urls')),
+    path('railway_pnr/', include('rail_app.urls')),
 ]
 
